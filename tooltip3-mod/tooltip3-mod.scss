@@ -1,0 +1,116 @@
+
+//
+$tooltip-color:         #fff;
+
+$service-colour-up-muted: #229954;               // green
+$service-colour-down-muted: #ec7063;             // red
+$service-colour-unknown-muted: #f7dc6f;          // yellow
+$service-colour-watcher-failed-muted: #f5b041;   // orange
+
+$nic-colour-up-muted: #229954;               // green
+$nic-colour-down-muted: #ec7063;             // red
+$nic-colour-missing-muted: #f5b041;          // orange
+
+$disk-colour-good-muted: #229954;             // green
+$disk-colour-warning-muted: #ec7063;          // red
+$disk-colour-full-muted: #f5b041;             // orange
+
+//
+//  In Bootstrap 4.0.0-alpha6 everything works
+//  In Bootstrap 4.0.0 the arrow doesn't take the tooltip colour.
+//
+//  Try this
+// .tooltip-primary .arrow:before {
+//   border-top-color:#0275d8;
+// }
+.wid140 {
+  width: 140px;
+  border:1px solid #000;
+}
+
+@mixin tooltip-custom($bg-color, $color: $tooltip-color) {
+
+  // .arrow::before {
+  //   border-top-color: $bg-color;
+  // }
+
+  .tooltip-inner {
+    background-color: $bg-color;
+    @if $color != $tooltip-color {
+       color: $color;
+    }
+  }
+
+  &.tooltip-top,
+  &.bs-tether-element-attached-bottom {
+    .tooltip-inner::before {
+      border-top-color: $bg-color;
+    }
+  }
+
+  &.tooltip-right,
+  &.bs-tether-element-attached-left {
+    .tooltip-inner::before {
+      border-right-color: $bg-color;
+    }
+  }
+
+  &.tooltip-bottom,
+  &.bs-tether-element-attached-top {
+    .tooltip-inner::before {
+      border-bottom-color: $bg-color;
+    }
+  }
+
+  &.tooltip-left,
+  &.bs-tether-element-attached-right {
+    .tooltip-inner::before {
+      border-left-color: $bg-color;
+    }
+  }
+
+}
+
+//== Styles for Tooltip Custom Classes
+//
+//##
+.tooltip-nic-up {
+  @include tooltip-custom($nic-colour-up-muted);
+}
+
+.tooltip-nic-down {
+  @include tooltip-custom($nic-colour-down-muted);
+}
+
+.tooltip-nic-missing {
+  @include tooltip-custom($nic-colour-missing-muted);
+}
+//
+.tooltip-disk-good {
+  @include tooltip-custom($disk-colour-good-muted);
+}
+
+.tooltip-disk-full {
+  @include tooltip-custom($disk-colour-full-muted);
+}
+
+.tooltip-disk-warning {
+  @include tooltip-custom($disk-colour-warning-muted);
+}
+
+//
+.tooltip-service-up {
+  @include tooltip-custom($service-colour-up-muted);
+}
+
+.tooltip-service-down {
+  @include tooltip-custom($service-colour-down-muted);
+}
+
+.tooltip-service-watcher-failed {
+  @include tooltip-custom($service-colour-watcher-failed-muted);
+}
+
+.tooltip-service-unknown {
+  @include tooltip-custom($service-colour-unknown-muted);
+}

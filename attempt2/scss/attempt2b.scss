@@ -1,0 +1,397 @@
+@import 'reset';
+
+$background-colour: #000;
+
+$service-name-font-size: 12px;
+
+$server-colour: #3498db;
+$server-width: 240px;
+// $server-height: 600px;
+$server-unit-size: 26px;
+$service-title-font-size: 16px;
+$service-title-margin-top: 5px;
+$service-border-colour: #000;
+$service-border-width: 2px;
+$server-height: (20 * ($server-unit-size + $service-border-width)) + $service-title-font-size + $service-title-margin-top;
+$server-border-width: 3px;
+$server-border-colour: #fff;
+
+
+$service-width: 140px;
+$service-block1-top: 12px;
+$service-block2-top: 292px;
+$service-colour-up: #008000;               // green
+$service-colour-down: #f00;                // red
+$service-colour-unknown: #ff0;             // yellow
+$service-colour-watcher-failed: #ffa500;   // orange
+$service-colour-up-muted: #229954;               // green
+$service-colour-down-muted: #ec7063;             // red
+$service-colour-unknown-muted: #f7dc6f;          // yellow
+$service-colour-watcher-failed-muted: #f5b041;   // orange
+
+
+$nic-border-colour: #000;
+$nic-border-width: 2px;
+$nic-width: 40px;
+$nic-top: $service-block1-top;
+$nic-colour-up: #008000;               // green
+$nic-colour-down: #f00;                // red
+$nic-colour-missing: #ffa500;          // orange
+$nic-colour-up-muted: #229954;               // green
+$nic-colour-down-muted: #ec7063;             // red
+$nic-colour-missing-muted: #f5b041;          // orange
+
+$disk-border-colour: #000;
+$disk-border-width: 2px;
+$disk-width: 40px;
+$disk-top: $service-block2-top;
+$disk-colour-good: #008000;            // green
+$disk-colour-warning: #ffa500;         // orange
+$disk-colour-full: #f00;               // red
+$disk-colour-good-muted: #229954;             // green
+$disk-colour-warning-muted: #ec7063;          // red
+$disk-colour-full-muted: #f5b041;             // orange
+
+@function get-top($offset, $row) {
+  @return $offset + ($row * ($server-unit-size + $service-border-width));
+}
+
+@function get-nic-top($offset, $row) {
+  @return $offset + ((-.5 + ($row * 1.5)) * ($server-unit-size + $service-border-width));
+}
+
+.canvas {
+  background: $background-colour;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $service-title-font-size;
+  margin-top: $service-title-margin-top;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+}
+
+.service {
+  border: $service-border-width solid $service-border-colour;
+  box-sizing: content-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $service-name-font-size;
+  height: $server-unit-size;
+  line-height: $server-unit-size;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: $service-width;
+
+  &.up {
+    background: $service-colour-up;
+  }
+
+  &.down {
+    background: $service-colour-down;
+  }
+
+  &.unknown {
+    background: $service-colour-unknown;
+  }
+
+  &.watcher-failed {
+    background: $service-colour-watcher-failed;
+  }
+}
+
+.nic {
+  border: $nic-border-colour solid $nic-border-width;
+  box-sizing: content-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $service-name-font-size;
+  height: $server-unit-size;
+  left: 10px;
+  line-height: $server-unit-size;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: $nic-width;
+
+  &.up {
+    background: $nic-colour-up;
+  }
+
+  &.down {
+    background: $nic-colour-down;
+  }
+
+  &.missing {
+    background: $nic-colour-missing;
+  }
+}
+
+
+.disk {
+  border: $disk-border-colour solid $disk-border-width;
+  border-radius: 5px;
+  box-sizing: content-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $service-name-font-size;
+  height: $server-unit-size;
+  left: 10px;
+  line-height: $server-unit-size;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: $disk-width;
+
+  &.good {
+    background: $disk-colour-good;
+  }
+
+  &.warning {
+    background: $disk-colour-warning;
+  }
+
+  &.full {
+    background: $disk-colour-full;
+  }
+}
+
+//  screen 1920 x 1200
+//  servers 8 x 2
+//  server height needs to hold 22.5 units  => 1200 / 2 / 22.5 ~ 26.6
+//  server width  1920 / 8 = 240
+.server11 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  // display: none;
+  height: $server-height;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  width: $server-width;
+}
+
+.server12 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  height: $server-height;
+  left: 5px + $server-width + 10px;
+  position: absolute;
+  top: 5px;
+  width: $server-width;
+}
+
+.server13 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  height: $server-height;
+  left: 5px + ($server-width * 2) + 20px;
+  position: absolute;
+  top: 5px;
+  width: $server-width;
+}
+
+.server14 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  height: $server-height;
+  left: 5px + ($server-width * 3) + 30px;
+  position: absolute;
+  top: 5px;
+  width: $server-width;
+}
+
+.server21 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  // display: none;
+  height: $server-height;
+  left: 5px;
+  position: absolute;
+  top: 5px + $server-height + 10px;
+  width: $server-width;
+}
+
+.server22 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  // display: none;
+  height: $server-height;
+  left: 5px + ($server-width * 1) + 10px;
+  position: absolute;
+  top: 5px + $server-height + 10px;
+  width: $server-width;
+}
+
+.server23 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  // display: none;
+  height: $server-height;
+  left: 5px + ($server-width * 2) + 20px;
+  position: absolute;
+  top: 5px + $server-height + 10px;
+  width: $server-width;
+}
+
+.server24 {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  // display: none;
+  height: $server-height;
+  left: 5px + ($server-width * 3) + 30px;
+  position: absolute;
+  top: 5px + $server-height + 10px;
+  width: $server-width;
+}
+
+.block1-row1 {
+  top: get-top($service-block1-top, 1);
+}
+
+.block1-row2 {
+  top: get-top($service-block1-top, 2);
+}
+
+.block1-row3 {
+  top: get-top($service-block1-top, 3);
+}
+
+.block1-row4 {
+  top: get-top($service-block1-top, 4);
+}
+
+.block1-row5 {
+  top: get-top($service-block1-top, 5);
+}
+
+.block1-row6 {
+  top: get-top($service-block1-top, 6);
+}
+
+.block1-row7 {
+  top: get-top($service-block1-top, 7);
+}
+
+.block1-row8 {
+  top: get-top($service-block1-top, 8);
+}
+
+.block1-row9 {
+  top: get-top($service-block1-top, 9);
+}
+
+
+.block2-row1 {
+  top: get-top($service-block2-top, 1);
+}
+
+.block2-row2 {
+  top: get-top($service-block2-top, 2);
+}
+
+.block2-row3 {
+  top: get-top($service-block2-top, 3);
+}
+
+.block2-row4 {
+  top: get-top($service-block2-top, 4);
+}
+
+.block2-row5 {
+  top: get-top($service-block2-top, 5);
+}
+
+.block2-row6 {
+  top: get-top($service-block2-top, 6);
+}
+
+.block2-row7 {
+  top: get-top($service-block2-top, 7);
+}
+
+.block2-row8 {
+  top: get-top($service-block2-top, 8);
+}
+
+.block2-row9 {
+  top: get-top($service-block2-top, 9);
+}
+
+.nic1 {
+  top: get-top($nic-top, 1);
+}
+
+.nic2 {
+  top: get-top($nic-top, 2);
+}
+
+.nic3 {
+  top: get-top($nic-top, 3);
+}
+
+.nic4 {
+  top: get-top($nic-top, 4);
+}
+
+.nic5 {
+  top: get-top($nic-top, 5);
+}
+
+.nic6 {
+  top: get-top($nic-top, 6);
+}
+
+.nic7 {
+  top: get-top($nic-top, 7);
+}
+
+.nic8 {
+  top: get-top($nic-top, 9);
+}
+
+.nic9 {
+  top: get-top($nic-top, 9);
+}
+
+.disk1 {
+  top: get-top($disk-top, 1);
+}
+
+.disk2 {
+  top: get-top($disk-top, 2);
+}
+
+.disk3 {
+  top: get-top($disk-top, 3);
+}
+
+.disk4 {
+  top: get-top($disk-top, 4);
+}
+
+.disk5 {
+  top: get-top($disk-top, 5);
+}
+
+.disk6 {
+  top: get-top($disk-top, 6);
+}
+
+.disk7 {
+  top: get-top($disk-top, 7);
+}
+
+.disk8 {
+  top: get-top($disk-top, 8);
+}
+
+.disk9 {
+  top: get-top($disk-top, 9);
+}

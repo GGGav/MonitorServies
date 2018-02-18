@@ -1,0 +1,212 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Sections and scaffold together */
+
+* { box-sizing: border-box }
+
+html, body {
+  width: 99.9%;
+  height: 100%;
+  background-color: #d0d0d0;
+}
+
+div {
+  float: left;
+  display: block;
+  color: #fff;
+  width: 20%;
+  height: 25%;
+  position: relative;
+  transition: opacity 0.5s ease;
+  -webkit-transition: 0.5s ease;
+}
+
+h1{
+  color: #000;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2{
+  color: #ffffff;
+  font-size: medium;
+  text-align: left;
+  margin: -11px 0 0 13px;
+}
+
+h3{
+  font-size: large;
+  text-align: left;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+h4{
+  font-size: 0.78em;
+  text-align: left;
+  color: #ffffff;
+}
+
+h5{
+  font-size: 0.70em;
+  text-align: left;
+  color: #ffffff;
+}
+
+h4{
+  font-size: 0.65em;
+  text-align: left;
+  color: #ffffff;
+}
+
+
+p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1em;
+  position: absolute;
+  bottom: 0;
+  padding-left: 0.2em;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.inspired-by{
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #111;
+}
+
+header{
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*  My stuff */
+
+/* constants */
+:root {
+  --unit-size: 30;
+  --border-width: 2;
+}
+div.relative {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #ffffff;
+    background: #3498db;
+}
+
+.service {
+  position: absolute;
+  right: 40px;
+  width: 180px;
+  height: 30px;
+  border-width: 1px;
+  border: solid #000000;
+  /* border: 2px solid #000000; */
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+div.service:hover {
+  opacity: 0.85;
+}
+
+.block1-row1 {
+    top: 40px;
+}
+.block1-row2 {
+    top: 68px;
+}
+.block1-row3 {
+    top: 96px;
+}
+.block1-row4 {
+    top: 124px;
+}
+.block1-row5 {
+    top: 152px;
+}
+.block1-row6 {
+    top: 180px;
+}
+.block1-row7 {
+    top: 208px;
+}
+.block1-row8 {
+    top: 236px;
+}
+.block1-row9 {
+    top: 264px;
+}
+
+div.nic-block1-1 {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000000;
+}
+
+p.title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.3em;
+}

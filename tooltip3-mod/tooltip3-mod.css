@@ -1,0 +1,115 @@
+.wid140 {
+  width: 140px;
+  border: 1px solid #000; }
+
+.tooltip-nic-up .tooltip-inner {
+  background-color: #229954; }
+.tooltip-nic-up.tooltip-top .tooltip-inner::before, .tooltip-nic-up.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #229954; }
+.tooltip-nic-up.tooltip-right .tooltip-inner::before, .tooltip-nic-up.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #229954; }
+.tooltip-nic-up.tooltip-bottom .tooltip-inner::before, .tooltip-nic-up.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #229954; }
+.tooltip-nic-up.tooltip-left .tooltip-inner::before, .tooltip-nic-up.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #229954; }
+
+.tooltip-nic-down .tooltip-inner {
+  background-color: #ec7063; }
+.tooltip-nic-down.tooltip-top .tooltip-inner::before, .tooltip-nic-down.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ec7063; }
+.tooltip-nic-down.tooltip-right .tooltip-inner::before, .tooltip-nic-down.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ec7063; }
+.tooltip-nic-down.tooltip-bottom .tooltip-inner::before, .tooltip-nic-down.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ec7063; }
+.tooltip-nic-down.tooltip-left .tooltip-inner::before, .tooltip-nic-down.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ec7063; }
+
+.tooltip-nic-missing .tooltip-inner {
+  background-color: #f5b041; }
+.tooltip-nic-missing.tooltip-top .tooltip-inner::before, .tooltip-nic-missing.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #f5b041; }
+.tooltip-nic-missing.tooltip-right .tooltip-inner::before, .tooltip-nic-missing.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #f5b041; }
+.tooltip-nic-missing.tooltip-bottom .tooltip-inner::before, .tooltip-nic-missing.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #f5b041; }
+.tooltip-nic-missing.tooltip-left .tooltip-inner::before, .tooltip-nic-missing.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #f5b041; }
+
+.tooltip-disk-good .tooltip-inner {
+  background-color: #229954; }
+.tooltip-disk-good.tooltip-top .tooltip-inner::before, .tooltip-disk-good.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #229954; }
+.tooltip-disk-good.tooltip-right .tooltip-inner::before, .tooltip-disk-good.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #229954; }
+.tooltip-disk-good.tooltip-bottom .tooltip-inner::before, .tooltip-disk-good.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #229954; }
+.tooltip-disk-good.tooltip-left .tooltip-inner::before, .tooltip-disk-good.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #229954; }
+
+.tooltip-disk-full .tooltip-inner {
+  background-color: #f5b041; }
+.tooltip-disk-full.tooltip-top .tooltip-inner::before, .tooltip-disk-full.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #f5b041; }
+.tooltip-disk-full.tooltip-right .tooltip-inner::before, .tooltip-disk-full.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #f5b041; }
+.tooltip-disk-full.tooltip-bottom .tooltip-inner::before, .tooltip-disk-full.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #f5b041; }
+.tooltip-disk-full.tooltip-left .tooltip-inner::before, .tooltip-disk-full.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #f5b041; }
+
+.tooltip-disk-warning .tooltip-inner {
+  background-color: #ec7063; }
+.tooltip-disk-warning.tooltip-top .tooltip-inner::before, .tooltip-disk-warning.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ec7063; }
+.tooltip-disk-warning.tooltip-right .tooltip-inner::before, .tooltip-disk-warning.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ec7063; }
+.tooltip-disk-warning.tooltip-bottom .tooltip-inner::before, .tooltip-disk-warning.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ec7063; }
+.tooltip-disk-warning.tooltip-left .tooltip-inner::before, .tooltip-disk-warning.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ec7063; }
+
+.tooltip-service-up .tooltip-inner {
+  background-color: #229954; }
+.tooltip-service-up.tooltip-top .tooltip-inner::before, .tooltip-service-up.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #229954; }
+.tooltip-service-up.tooltip-right .tooltip-inner::before, .tooltip-service-up.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #229954; }
+.tooltip-service-up.tooltip-bottom .tooltip-inner::before, .tooltip-service-up.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #229954; }
+.tooltip-service-up.tooltip-left .tooltip-inner::before, .tooltip-service-up.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #229954; }
+
+.tooltip-service-down .tooltip-inner {
+  background-color: #ec7063; }
+.tooltip-service-down.tooltip-top .tooltip-inner::before, .tooltip-service-down.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ec7063; }
+.tooltip-service-down.tooltip-right .tooltip-inner::before, .tooltip-service-down.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ec7063; }
+.tooltip-service-down.tooltip-bottom .tooltip-inner::before, .tooltip-service-down.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ec7063; }
+.tooltip-service-down.tooltip-left .tooltip-inner::before, .tooltip-service-down.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ec7063; }
+
+.tooltip-service-watcher-failed .tooltip-inner {
+  background-color: #f5b041; }
+.tooltip-service-watcher-failed.tooltip-top .tooltip-inner::before, .tooltip-service-watcher-failed.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #f5b041; }
+.tooltip-service-watcher-failed.tooltip-right .tooltip-inner::before, .tooltip-service-watcher-failed.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #f5b041; }
+.tooltip-service-watcher-failed.tooltip-bottom .tooltip-inner::before, .tooltip-service-watcher-failed.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #f5b041; }
+.tooltip-service-watcher-failed.tooltip-left .tooltip-inner::before, .tooltip-service-watcher-failed.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #f5b041; }
+
+.tooltip-service-unknown .tooltip-inner {
+  background-color: #f7dc6f; }
+.tooltip-service-unknown.tooltip-top .tooltip-inner::before, .tooltip-service-unknown.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #f7dc6f; }
+.tooltip-service-unknown.tooltip-right .tooltip-inner::before, .tooltip-service-unknown.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #f7dc6f; }
+.tooltip-service-unknown.tooltip-bottom .tooltip-inner::before, .tooltip-service-unknown.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #f7dc6f; }
+.tooltip-service-unknown.tooltip-left .tooltip-inner::before, .tooltip-service-unknown.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #f7dc6f; }
+
+/*# sourceMappingURL=tooltip3-mod.css.map */

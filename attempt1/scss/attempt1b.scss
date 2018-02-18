@@ -1,0 +1,255 @@
+@import 'reset';
+
+$background-colour: #000;
+
+$font-size-title: 1em;
+$font-size-boxed: .8em;
+
+$server-colour: #3498db;
+$server-width: 240px;
+$server-height: 600px;
+$server-border-width: 3px;
+$server-border-colour: #fff;
+$server-unit-size: 26px;
+
+$service-border-colour: #000;
+$service-border-width: 2px;
+$service-width: 140px;
+$service-block1-top: 12px;
+$service-block2-top: 292px;
+
+$nic-border-colour: #000;
+$nic-border-width: 2px;
+$nic-width: 40px;
+$nic-top: $service-block1-top;
+
+$nic-border-colour: #000;
+$nic-border-width: 2px;
+$nic-width: 40px;
+$nic-top: $service-block1-top;
+
+$disk-border-colour: #000;
+$disk-border-width: 2px;
+$disk-width: 40px;
+$disk-top: $service-block2-top;
+
+@function get-top($offset, $row) {
+  @return $offset + ($row * ($server-unit-size + $service-border-width));
+}
+
+@function get-nic-top($offset, $row) {
+  @return $offset + ((-.5 + ($row * 1.5)) * ($server-unit-size + $service-border-width));
+}
+
+body {
+  background: $background-colour;
+}
+
+//  screen 1920 x 1200
+//  servers 8 x 2
+//  server height needs to hold 22.5 units  => 1200 / 2 / 22.5 ~ 26.6
+//  server width  1920 / 8 = 240
+.server {
+  background: $server-colour;
+  border: $server-border-width solid $server-border-colour;
+  height: $server-height;
+  position: relative;
+  width: $server-width;
+}
+
+.title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1em;
+  margin-top: .3em;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+}
+
+.service {
+  border: $service-border-width solid $service-border-colour;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $font-size-boxed;
+  height: $server-unit-size;
+  line-height: $server-unit-size;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: $service-width;
+}
+
+.block1-row1 {
+  top: get-top($service-block1-top, 1);
+}
+
+.block1-row2 {
+  top: get-top($service-block1-top, 2);
+}
+
+.block1-row3 {
+  top: get-top($service-block1-top, 3);
+}
+
+.block1-row4 {
+  top: get-top($service-block1-top, 4);
+}
+
+.block1-row5 {
+  top: get-top($service-block1-top, 5);
+}
+
+.block1-row6 {
+  top: get-top($service-block1-top, 6);
+}
+
+.block1-row7 {
+  top: get-top($service-block1-top, 7);
+}
+
+.block1-row8 {
+  top: get-top($service-block1-top, 8);
+}
+
+.block1-row9 {
+  top: get-top($service-block1-top, 9);
+}
+
+
+.block2-row1 {
+  top: get-top($service-block2-top, 1);
+}
+
+.block2-row2 {
+  top: get-top($service-block2-top, 2);
+}
+
+.block2-row3 {
+  top: get-top($service-block2-top, 3);
+}
+
+.block2-row4 {
+  top: get-top($service-block2-top, 4);
+}
+
+.block2-row5 {
+  top: get-top($service-block2-top, 5);
+}
+
+.block2-row6 {
+  top: get-top($service-block2-top, 6);
+}
+
+.block2-row7 {
+  top: get-top($service-block2-top, 7);
+}
+
+.block2-row8 {
+  top: get-top($service-block2-top, 8);
+}
+
+.block2-row9 {
+  top: get-top($service-block2-top, 9);
+}
+
+
+.nic {
+  border: $nic-border-colour solid $nic-border-width;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $font-size-boxed;
+  height: $server-unit-size;
+  left: 10px;
+  line-height: $server-unit-size;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: $nic-width;
+}
+
+.nic1 {
+  top: get-top($nic-top, 1);
+}
+
+.nic2 {
+  top: get-top($nic-top, 2);
+}
+
+.nic3 {
+  top: get-top($nic-top, 3);
+}
+
+.nic4 {
+  top: get-top($nic-top, 4);
+}
+
+.nic5 {
+  top: get-top($nic-top, 5);
+}
+
+.nic6 {
+  top: get-top($nic-top, 6);
+}
+
+.nic7 {
+  top: get-top($nic-top, 7);
+}
+
+.nic8 {
+  top: get-top($nic-top, 9);
+}
+
+.nic9 {
+  top: get-top($nic-top, 9);
+}
+
+.disk {
+  border: $disk-border-colour solid $disk-border-width;
+  border-radius: 5px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $font-size-boxed;
+  height: $server-unit-size;
+  left: 10px;
+  line-height: $server-unit-size;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: $disk-width;
+}
+
+.disk1 {
+  top: get-top($disk-top, 1);
+}
+
+.disk2 {
+  top: get-top($disk-top, 2);
+}
+
+.disk3 {
+  top: get-top($disk-top, 3);
+}
+
+.disk4 {
+  top: get-top($disk-top, 4);
+}
+
+.disk5 {
+  top: get-top($disk-top, 5);
+}
+
+.disk6 {
+  top: get-top($disk-top, 6);
+}
+
+.disk7 {
+  top: get-top($disk-top, 7);
+}
+
+.disk8 {
+  top: get-top($disk-top, 8);
+}
+
+.disk9 {
+  top: get-top($disk-top, 9);
+}

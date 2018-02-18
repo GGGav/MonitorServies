@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <title>tooltip1</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+  <link href='tooltip1.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <h1 class="ct">Bootstrap 3.3.5</h1>
+  <div class="ct"><small>Tooltip and Popover for multiple elements</small></div>
+
+  <div class="multiple_elements">
+
+    <h2>TOOLTIP</h2>
+    <div class="ct"><small><u>Hover/tap</u> on the element</small></div>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary ole" data-toggle="tooltip" data-placement="left" data-original-title="this is a left tooltip">
+        OLE
+      </button>
+
+      <button type="button" class="btn btn-primary ole two" data-toggle="tooltip" data-placement="top" data-original-title="this is a top tooltip">
+        OLE
+      </button>
+
+      <button type="button" class="btn btn-primary ole three" data-toggle="tooltip" data-placement="bottom" data-original-title="this is a bottom tooltip">
+        OLE
+      </button>
+
+      <button type="button" class="btn btn-primary ole four" data-toggle="tooltip" data-placement="right" data-original-title="this is a right tooltip">
+        OLE
+      </button>
+    </div>
+
+  </div>
+
+  <div class="multiple_elements">
+
+    <h2>POPOVER</h2>
+    <div class="ct"><small>Click/tap the element to toggle the popover</small></div>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary elo four" data-toggle="popover" data-placement="left" data-original-title="LEFT POPOVER" data-content="The paragraph within the popover is using <code>data-content</code> attribute.">
+        ELO
+      </button>
+
+      <button type="button" class="btn btn-primary elo three" data-toggle="popover" data-placement="top" data-original-title="TOP POPOVER" data-content="The paragraph within the popover is using <code>data-content</code> attribute.">
+        ELO
+      </button>
+
+      <button type="button" class="btn btn-primary elo two" data-toggle="popover" data-placement="bottom" data-original-title="BOTTOM POPOVER" data-content="The paragraph within the popover is using <code>data-content</code> attribute.">
+        ELO
+      </button>
+
+      <button type="button" class="btn btn-primary elo" data-toggle="popover" data-placement="right" data-original-title="RIGHT POPOVER" data-content="The paragraph within the popover is using <code>data-content</code> attribute.">
+        ELO
+      </button>
+    </div>
+
+  </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/popper-1.12.9.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- <script src="js/tooltip1.js" type="text/css"></script> -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</body>
+
+</html>
