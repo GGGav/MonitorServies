@@ -38,6 +38,9 @@
 
 /** **/
 $(document).ready(function(){
+  $('.tt-server-bottom').tooltip({
+    customClass: 'tooltip-server-bottom'
+  });
   $('.tt-nic-up').tooltip({
     customClass: 'tooltip-nic-up'
   });
