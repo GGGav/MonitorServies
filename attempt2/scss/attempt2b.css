@@ -105,13 +105,13 @@ body {
 
 .server {
   border: 3px solid #fff;
-  height: 581px;
+  height: 609px;
   position: absolute;
   width: 240px; }
   .server.server-good {
     background: #3498db; }
   .server.server-alert {
-    background: #ffff66; }
+    background: #ff6; }
   .server.server11 {
     left: 5px;
     top: 5px; }
@@ -126,16 +126,16 @@ body {
     top: 5px; }
   .server.server21 {
     left: 5px;
-    top: 596px; }
+    top: 624px; }
   .server.server22 {
     left: 255px;
-    top: 596px; }
+    top: 624px; }
   .server.server23 {
     left: 505px;
-    top: 596px; }
+    top: 624px; }
   .server.server24 {
     left: 755px;
-    top: 596px; }
+    top: 624px; }
 
 .block1-row1 {
   top: 40px; }
@@ -244,5 +244,35 @@ body {
 
 .disk9 {
   top: 544px; }
+
+.scroll-box {
+  height: 26px;
+  overflow: hidden;
+  position: absolute;
+  top: 576px;
+  white-space: nowrap;
+  width: 234px; }
+
+.server-message {
+  -moz-animation: scroll 10s infinite linear;
+  -o-animation: scroll 10s infinite linear;
+  -webkit-animation: scroll 10s infinite linear;
+  animation: scroll 10s infinite linear;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  line-height: 26px;
+  position: relative;
+  vertical-align: middle; }
+
+@keyframes scroll {
+  0% {
+    left: 240px; }
+  100% {
+    left: -240px; } }
+@-webkit-keyframes scroll {
+  0% {
+    left: 240px; }
+  100% {
+    left: -240px; } }
 
 /*# sourceMappingURL=attempt2b.css.map */

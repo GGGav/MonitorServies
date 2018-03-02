@@ -4,16 +4,17 @@ $background-colour: #000;
 
 $service-name-font-size: 12px;
 
+$server-message-font-size: 12px;
+
 $server-colour-good: #3498db;
-$server-colour-alter: #ffff66;
+$server-colour-alter: #ff6;
 $server-width: 240px;
-// $server-height: 600px;
 $server-unit-size: 26px;
 $service-title-font-size: 16px;
 $service-title-margin-top: 5px;
 $service-border-colour: #000;
 $service-border-width: 2px;
-$server-height: (20 * ($server-unit-size + $service-border-width)) + $service-title-font-size + $service-title-margin-top;
+$server-height: (21 * ($server-unit-size + $service-border-width)) + $service-title-font-size + $service-title-margin-top;
 $server-border-width: 3px;
 $server-border-colour: #fff;
 
@@ -368,4 +369,35 @@ body {
 
 .disk9 {
   top: get-top($disk-top, 9);
+}
+
+.scroll-box {
+  height: $server-unit-size;
+  overflow: hidden;
+  position: absolute;
+  top: get-top($service-block2-top, 10) + 4;
+  white-space: nowrap;
+  width: $server-width - (2 * $server-border-width);
+}
+
+.server-message {
+  -moz-animation: scroll 10s infinite linear;
+  -o-animation: scroll 10s infinite linear;
+  -webkit-animation: scroll 10s infinite linear;
+  animation: scroll 10s infinite linear;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $server-message-font-size;
+  line-height: $server-unit-size;
+  position: relative;
+  vertical-align: middle;
+}
+
+@keyframes scroll{
+  0% {left: 240px;}
+  100% {left: -240px;}
+}
+
+@-webkit-keyframes scroll{
+  0% {left: 240px;}
+  100% {left: -240px;}
 }
