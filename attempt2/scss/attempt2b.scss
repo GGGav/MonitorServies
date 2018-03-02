@@ -4,7 +4,8 @@ $background-colour: #000;
 
 $service-name-font-size: 12px;
 
-$server-colour: #3498db;
+$server-colour-good: #3498db;
+$server-colour-alter: #ffff66;
 $server-width: 240px;
 // $server-height: 600px;
 $server-unit-size: 26px;
@@ -60,12 +61,15 @@ $disk-colour-full-muted: #f5b041;             // orange
   @return $offset + ((-.5 + ($row * 1.5)) * ($server-unit-size + $service-border-width));
 }
 
-.canvas {
+body {
   background: $background-colour;
-  height: 100%;
-  position: relative;
-  width: 100%;
 }
+// .canvas {
+//   background: $background-colour;
+//   height: 100%;
+//   position: relative;
+//   width: 100%;
+// }
 
 .title {
   font-family: 'Noto Sans', sans-serif;
@@ -162,93 +166,63 @@ $disk-colour-full-muted: #f5b041;             // orange
   }
 }
 
-//  screen 1920 x 1200
-//  servers 8 x 2
-//  server height needs to hold 22.5 units  => 1200 / 2 / 22.5 ~ 26.6
-//  server width  1920 / 8 = 240
-.server11 {
-  background: $server-colour;
+.server {
   border: $server-border-width solid $server-border-colour;
-  // display: none;
   height: $server-height;
-  left: 5px;
   position: absolute;
-  top: 5px;
   width: $server-width;
-}
 
-.server12 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  height: $server-height;
-  left: 5px + $server-width + 10px;
-  position: absolute;
-  top: 5px;
-  width: $server-width;
-}
+  &.server-good {
+    background: $server-colour-good;
+  }
 
-.server13 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  height: $server-height;
-  left: 5px + ($server-width * 2) + 20px;
-  position: absolute;
-  top: 5px;
-  width: $server-width;
-}
+  &.server-alert {
+    background: $server-colour-alter;
+  }
 
-.server14 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  height: $server-height;
-  left: 5px + ($server-width * 3) + 30px;
-  position: absolute;
-  top: 5px;
-  width: $server-width;
-}
+  //  screen 1920 x 1200
+  //  servers 8 x 2
+  //  server height needs to hold 22.5 units  => 1200 / 2 / 22.5 ~ 26.6
+  //  server width  1920 / 8 = 240
+  &.server11 {
+    left: 5px;
+    top: 5px;
+  }
 
-.server21 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  // display: none;
-  height: $server-height;
-  left: 5px;
-  position: absolute;
-  top: 5px + $server-height + 10px;
-  width: $server-width;
-}
+  &.server12 {
+    left: 5px + $server-width + 10px;
+    top: 5px;
+  }
 
-.server22 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  // display: none;
-  height: $server-height;
-  left: 5px + ($server-width * 1) + 10px;
-  position: absolute;
-  top: 5px + $server-height + 10px;
-  width: $server-width;
-}
+  &.server13 {
+    left: 5px + ($server-width * 2) + 20px;
+    top: 5px;
+  }
 
-.server23 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  // display: none;
-  height: $server-height;
-  left: 5px + ($server-width * 2) + 20px;
-  position: absolute;
-  top: 5px + $server-height + 10px;
-  width: $server-width;
-}
+  &.server14 {
+    left: 5px + ($server-width * 3) + 30px;
+    top: 5px;
+  }
 
-.server24 {
-  background: $server-colour;
-  border: $server-border-width solid $server-border-colour;
-  // display: none;
-  height: $server-height;
-  left: 5px + ($server-width * 3) + 30px;
-  position: absolute;
-  top: 5px + $server-height + 10px;
-  width: $server-width;
+  &.server21 {
+    left: 5px;
+    top: 5px + $server-height + 10px;
+  }
+
+  &.server22 {
+    left: 5px + ($server-width * 1) + 10px;
+    top: 5px + $server-height + 10px;
+  }
+
+  &.server23 {
+    left: 5px + ($server-width * 2) + 20px;
+    top: 5px + $server-height + 10px;
+  }
+
+  &.server24 {
+    left: 5px + ($server-width * 3) + 30px;
+    top: 5px + $server-height + 10px;
+  }
 }
 
 .block1-row1 {

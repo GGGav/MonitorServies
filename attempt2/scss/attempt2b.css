@@ -30,11 +30,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.canvas {
-  background: #000;
-  height: 100%;
-  position: relative;
-  width: 100%; }
+body {
+  background: #000; }
 
 .title {
   font-family: 'Noto Sans', sans-serif;
@@ -106,77 +103,39 @@ table {
   .disk.disk-full {
     background: #f00; }
 
-.server11 {
-  background: #3498db;
+.server {
   border: 3px solid #fff;
   height: 581px;
-  left: 5px;
   position: absolute;
-  top: 5px;
   width: 240px; }
-
-.server12 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 255px;
-  position: absolute;
-  top: 5px;
-  width: 240px; }
-
-.server13 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 505px;
-  position: absolute;
-  top: 5px;
-  width: 240px; }
-
-.server14 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 755px;
-  position: absolute;
-  top: 5px;
-  width: 240px; }
-
-.server21 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 5px;
-  position: absolute;
-  top: 596px;
-  width: 240px; }
-
-.server22 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 255px;
-  position: absolute;
-  top: 596px;
-  width: 240px; }
-
-.server23 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 505px;
-  position: absolute;
-  top: 596px;
-  width: 240px; }
-
-.server24 {
-  background: #3498db;
-  border: 3px solid #fff;
-  height: 581px;
-  left: 755px;
-  position: absolute;
-  top: 596px;
-  width: 240px; }
+  .server.server-good {
+    background: #3498db; }
+  .server.server-alert {
+    background: #ffff66; }
+  .server.server11 {
+    left: 5px;
+    top: 5px; }
+  .server.server12 {
+    left: 255px;
+    top: 5px; }
+  .server.server13 {
+    left: 505px;
+    top: 5px; }
+  .server.server14 {
+    left: 755px;
+    top: 5px; }
+  .server.server21 {
+    left: 5px;
+    top: 596px; }
+  .server.server22 {
+    left: 255px;
+    top: 596px; }
+  .server.server23 {
+    left: 505px;
+    top: 596px; }
+  .server.server24 {
+    left: 755px;
+    top: 596px; }
 
 .block1-row1 {
   top: 40px; }
