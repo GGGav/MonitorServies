@@ -91,19 +91,19 @@ $disk-colour-full-muted: #f5b041;             // orange
   vertical-align: middle;
   width: $service-width;
 
-  &.up {
+  &.service-up {
     background: $service-colour-up;
   }
 
-  &.down {
+  &.service-down {
     background: $service-colour-down;
   }
 
-  &.unknown {
+  &.service-unknown {
     background: $service-colour-unknown;
   }
 
-  &.watcher-failed {
+  &.service-watcher-failed {
     background: $service-colour-watcher-failed;
   }
 }
@@ -121,15 +121,15 @@ $disk-colour-full-muted: #f5b041;             // orange
   vertical-align: middle;
   width: $nic-width;
 
-  &.up {
+  &.nic-up {
     background: $nic-colour-up;
   }
 
-  &.down {
+  &.nic-down {
     background: $nic-colour-down;
   }
 
-  &.missing {
+  &.nic-missing {
     background: $nic-colour-missing;
   }
 }
@@ -149,15 +149,15 @@ $disk-colour-full-muted: #f5b041;             // orange
   vertical-align: middle;
   width: $disk-width;
 
-  &.good {
+  &.disk-good {
     background: $disk-colour-good;
   }
 
-  &.warning {
+  &.disk-warning {
     background: $disk-colour-warning;
   }
 
-  &.full {
+  &.disk-full {
     background: $disk-colour-full;
   }
 }

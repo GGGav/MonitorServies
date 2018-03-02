@@ -58,13 +58,13 @@ table {
   text-align: center;
   vertical-align: middle;
   width: 140px; }
-  .service.up {
+  .service.service-up {
     background: #008000; }
-  .service.down {
+  .service.service-down {
     background: #f00; }
-  .service.unknown {
+  .service.service-unknown {
     background: #ff0; }
-  .service.watcher-failed {
+  .service.service-watcher-failed {
     background: #ffa500; }
 
 .nic {
@@ -79,11 +79,11 @@ table {
   text-align: center;
   vertical-align: middle;
   width: 40px; }
-  .nic.up {
+  .nic.nic-up {
     background: #008000; }
-  .nic.down {
+  .nic.nic-down {
     background: #f00; }
-  .nic.missing {
+  .nic.nic-missing {
     background: #ffa500; }
 
 .disk {
@@ -99,11 +99,11 @@ table {
   text-align: center;
   vertical-align: middle;
   width: 40px; }
-  .disk.good {
+  .disk.disk-good {
     background: #008000; }
-  .disk.warning {
+  .disk.disk-warning {
     background: #ffa500; }
-  .disk.full {
+  .disk.disk-full {
     background: #f00; }
 
 .server11 {
