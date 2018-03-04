@@ -381,23 +381,17 @@ body {
 }
 
 .server-message {
-  -moz-animation: scroll 10s infinite linear;
-  -o-animation: scroll 10s infinite linear;
-  -webkit-animation: scroll 10s infinite linear;
-  animation: scroll 10s infinite linear;
+  animation: marquee 10s linear infinite;
+  display: inline-block;
   font-family: 'Noto Sans', sans-serif;
   font-size: $server-message-font-size;
   line-height: $server-unit-size;
+  padding-left: 100%;
   position: relative;
   vertical-align: middle;
 }
 
-@keyframes scroll{
-  0% {left: 240px;}
-  100% {left: -240px;}
-}
-
-@-webkit-keyframes scroll{
-  0% {left: 240px;}
-  100% {left: -240px;}
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
 }
